@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<ctime>
 #include <math.h>
 
 using namespace std;
@@ -132,5 +133,8 @@ int main(){
     vector<point> convex_points; 
     vector<int> convex_points_indices;
 
+	clock_t tStart = clock();
+
     convexHull(points, convex_points, convex_points_indices);
+cout<<"\nTime taken: "<<(double)(((double)(clock()) - (double)(tStart))/CLOCKS_PER_SEC)<<endl;
 }
